@@ -13,7 +13,7 @@ def get_direction():
    # c = click.getchar()
     #if c == '\x1b[D' or c =='a':
  while True:
-  for event in sense.stick.get_event():
+  for event in sense.stick.get_events():
    
     if event.direction == "left":
         print(event.direction, event.action)   
@@ -23,21 +23,21 @@ def get_direction():
         d_la = 0
  #   elif c == '\x1b[C' or c == "d":
  #       click.echo('Right')
-    elif event.direction == "right"
+    elif event.direction == "right":
         print(event.direction, event.action)
         send_vel = True
         d_long = 1
         d_la = 0
   #  elif c == '\x1b[A' or c =='w':
   #      click.echo('Up')
-     elif event.direction == "up"
+    elif event.direction == "up":
         print(event.direction, event.action)
         send_vel = True
         d_long = 0
         d_la = 1
   #  elif c == '\x1b[B' or c == 's':
   #      click.echo('Down')
-     elif event.direction == "down"
+    elif event.direction == "down":
         print(event.direction, event.action)
         send_vel = True
         d_long = 0
